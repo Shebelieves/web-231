@@ -1,4 +1,4 @@
 # WEB-231 Enterprise JavaScript I
 ## Contributors
--Professor Krasso
-..*Shelaine Walters
+1. Professor Krasso
+2. Shelaine Walters
