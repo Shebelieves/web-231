@@ -10,4 +10,5 @@ h1, h2, h3, h4{
     background-color: #3c275a;
     color: white;
     border:1px solid #d6a800;
+    padding: 10px;
 }
