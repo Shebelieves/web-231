@@ -20,3 +20,6 @@ a :hover{
     background-color: #d6a800;
     color:#4f3674;
 }
+a :visited{
+    color:#3c275A;
+}
