@@ -16,10 +16,10 @@ a{
     color: #453674;
     text-decoration: none;
 }
-a :hover{
+a:hover{
     background-color: #d6a800;
     color:#4f3674;
 }
-a :visited{
+a:visited{
     color:#3c275A;
 }
