@@ -6,12 +6,14 @@ body{
     margin-left: 100px;
     margin-right: 100px;
 }
+/*Start of headings*/
 h1, h2, h3, h4{
     background-color: #3c275a;
     color: white;
     border:1px solid #d6a800;
     padding: 10px;
 }
+/*Start links decor*/
 a{
     color: #453674;
     text-decoration: none;
@@ -23,3 +25,4 @@ a:hover{
 a:visited{
     color:#3c275A;
 }
+/*End links decor*/
