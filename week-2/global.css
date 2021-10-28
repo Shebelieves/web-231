@@ -14,5 +14,6 @@ Description: CSS requirements provided from WEB 231 assignments.
     background-color: #3c275a;
 }
 .return-home:hover{
-    background-color: #4f3674;
+    background-color: #D6a800;
+    color:#4F3674;
 }
