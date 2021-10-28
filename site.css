@@ -22,7 +22,7 @@ h1, h2, h3, h4{
     padding: 10px;
 }
 /*Start links decor*/
-a{
+a:link{
     color: #453674;
     text-decoration: none;
 }
