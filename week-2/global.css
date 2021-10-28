@@ -6,10 +6,13 @@ Date: October 27,1021
 Description: CSS requirements provided from WEB 231 assignments.
 */
 
-a:link .return-home{
+.return-home:link{
     color:#4F3674;
     text-decoration: none;
 }
-a:hover{
-    background-color: #D6A800;
+.return-home:visited{
+    background-color: #3c275a;
+}
+.return-home:hover{
+    background-color: #4f3674;
 }
