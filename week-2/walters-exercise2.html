@@ -22,18 +22,21 @@
     <body>
         <div id="container">
             <h1>Exercise 2.2 - Hello JavaScript</h1>
+        <!--start button-->
             <button type="button" id="btnMyCourse">
               What course am I taking?  
             </button>
+        <!--End button-->
                 <p id="txtMyWorld"></p>
                 <a href="../index.html" class="return-home">Return</a>
             </div>
                 <script>
             
-                    document.getElementById("txtMyWorld").innerHTML="You are now in Walters world!";
+                    document.getElementById("txtMyWorld").innerHTML="You are now in Walters world!"; // Get the element with id= "txtMyWorld"
+
                     document.getElementById("btnMyCourse").addEventListener("click", function(){
                     alert("WEB 231 - Enterprise JavaScript I.")
-                    });
+                    }); // click alert button with id="btnMyCourse"
                 </script>
     </body>
 </html>

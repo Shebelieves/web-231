@@ -3,9 +3,10 @@ Title: WEB231 CSS File
 Author: Professor Krasso
 Modified by: Shelaine Walters
 Date: October 27,1021
-Description: CSS requirements provided from WEB 231 assignments.
+Description: CSS requirements for return link provided from WEB 231 assignments.
 */
 
+/* Return link style*/
 .return-home:link{
     color:#4F3674;
     text-decoration: none;
