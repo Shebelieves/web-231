@@ -17,5 +17,8 @@ document.getElementById("txtFirstNameWolfgang").innerHTML =firstNameWolfgang;
 
 // Last name variables defined as strings and binded to inner html by their specified id
 let lastNameBeethoven = "Beethoven";
-document.getElementById("txtLastNameBeethoven").innerHTML =lastNameBach;
-let lastName
+document.getElementById("txtLastNameBeethoven").innerHTML = lastNameBeethoven;
+let lastNameBach = "Bach";
+document.getElementById("txtLastNameBach").innerHTML = lastNameBach;
+let lastNameWolfgang = "Mozart";
+document.getElementById("txtLastNameMozart").innerHTML = lastNameMozart;
