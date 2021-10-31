@@ -31,6 +31,8 @@ document.getElementById("txtAddressJohann").innerHTML = addressJohann;
 let addressWolfgang = "600 Main Street";
 document.getElementById("txtAddressWolfgang").innerHTML = addressWolfgang;
 
-//Hire date variables defined as strings and binded to inner html by their specific id
-let HireDateLudwig = new Date();
+//
+let hireDateLudwig = new Date();
 document.getElementById("txtHireDateLudwig").innerHTML =(hireDateLudwig.toLocalDateString('en-US'));
+let hireDateJohann = new Date();
+document.getElementById("txtHireDateJohann").innerHTML =hireDateJohann.toLocaleDateString('en-US'));
