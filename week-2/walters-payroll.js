@@ -20,5 +20,9 @@ let lastNameBeethoven = "Beethoven";
 document.getElementById("txtLastNameBeethoven").innerHTML = lastNameBeethoven;
 let lastNameBach = "Bach";
 document.getElementById("txtLastNameBach").innerHTML = lastNameBach;
-let lastNameWolfgang = "Mozart";
+let lastNameMozart = "Mozart";
 document.getElementById("txtLastNameMozart").innerHTML = lastNameMozart;
+
+// Address variables defined as strings and binded to inner html by their specific id
+let addressLudwig = "505 Main Street";
+document.getElementById("txtAddressLudwig").innerHTML = addressLudwig;
