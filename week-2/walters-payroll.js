@@ -33,6 +33,6 @@ document.getElementById("txtAddressWolfgang").innerHTML = addressWolfgang;
 
 //
 let hireDateLudwig = new Date();
-document.getElementById("txtHireDateLudwig").innerHTML =(hireDateLudwig.toLocalDateString('en-US'));
+document.getElementById("txtHireDateLudwig").innerHTML = (hireDateLudwig.toLocalDateString('en-US'));
 let hireDateJohann = new Date();
-document.getElementById("txtHireDateJohann").innerHTML =hireDateJohann.toLocaleDateString('en-US'));
+document.getElementById("txtHireDateJohann").innerHTML = (hireDateJohann.toLocaleDateString('en-US'));
