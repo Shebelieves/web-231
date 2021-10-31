@@ -31,10 +31,18 @@ document.getElementById("txtAddressJohann").innerHTML = addressJohann;
 let addressWolfgang = "600 Main Street";
 document.getElementById("txtAddressWolfgang").innerHTML = addressWolfgang;
 
-//
+// hireDate JavaScript date object and convert to a local date string.
 let hireDateLudwig = new Date();
 document.getElementById("txtHireDateLudwig").innerHTML=(hireDateLudwig.toLocaleDateString('en-US'));
 let hireDateJohann = new Date();
 document.getElementById("txtHireDateJohann").innerHTML=(hireDateJohann.toLocaleDateString('en-US'));
 let hireDateWolfgang = new Date ();
 document.getElementById("txtHireDateWolfgang").innerHTML=(hireDateWolfgang.toLocaleDateString('en-US'));
+
+// payRate to one decimal place using Fixed() position
+let payRateLudwig = 18.9000.toFixed(1);
+document.getElementById("txtPayRateLudwig").innerHTML= payRateLudwig;
+let payRateJohann = 25.5000.toFixed(1);
+document.getElementById("txtPayRateJohann").innerHTML= payRateJohann;
+let payRateWolfgang = 50.1000.toFixed(1);
+document.getElementById("txtPayRateWolfgang").innerHTML= payRateWolfgang;
