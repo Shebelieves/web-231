@@ -10,4 +10,7 @@
 // First name variables defined as strings and binded to inner html by their specified id
 let firstNameLudwig = "Ludwig";
 document.getElementById("txtFirstNameLudwig").innerHTML = firstNameLudwig;
-let firstName
+let firstNameJohann = "Johann";
+document.getElementById("txtFirstNameJohann").innerHTML = firstNameJohann;
+let firstNameWolfgang = "Wolfgang";
+document.getElementById("txtFirstNameWolfgang").innerHTML =firstNameWolfgang;
