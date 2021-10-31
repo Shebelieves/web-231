@@ -29,7 +29,7 @@ document.getElementById("txtAddressLudwig").innerHTML = addressLudwig;
 let addressJohann = "512 Main Street";
 document.getElementById("txtAddressJohann").innerHTML = addressJohann;
 let addressWolfgang = "600 Main Street";
-document.getElementById(txtAddressWolfgang).innerHTML = addressWolfgang;
+document.getElementById("txtAddressWolfgang").innerHTML = addressWolfgang;
 
 //Hire date variables defined as strings and binded to inner html by their specific id
 letHireDateLudwig = new Date();
