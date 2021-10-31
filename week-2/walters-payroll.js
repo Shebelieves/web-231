@@ -37,4 +37,4 @@ document.getElementById("txtHireDateLudwig").innerHTML=(hireDateLudwig.toLocaleD
 let hireDateJohann = new Date();
 document.getElementById("txtHireDateJohann").innerHTML=(hireDateJohann.toLocaleDateString('en-US'));
 let hireDateWolfgang = new Date ();
-document.getElementById("txtHireDateWolfgang").innerHTML=hireDateWolfgang.toLocaleDateString('en-US'));
+document.getElementById("txtHireDateWolfgang").innerHTML=(hireDateWolfgang.toLocaleDateString('en-US'));
