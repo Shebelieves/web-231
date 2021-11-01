@@ -2,6 +2,7 @@
 // Author: Professor Krasso
 // Date: October, 31, 2021
 // Modified by: Shelaine Walters
+// Assisted by: Papo
 // Description: How to target elements on the html file with
 //              JavaScript to create a payroll chart.
 
