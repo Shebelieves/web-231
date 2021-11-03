@@ -1,0 +1,1 @@
+document.getElementById("txtFahrenheit").onclick = function() {myFunction()};

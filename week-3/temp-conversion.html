@@ -17,27 +17,31 @@
     <link href="../global.css" type="text/css" rel="stylesheet"/>
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
-<body>
-    <div id="container">
-        <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
-
-        <div id="fahrenheit-card">
-            <div class="card">
-                <div class="card-title">Fahrenheit to Celsius Converter</div>
-                <div class="card-content">
-                    <div class="form">
-                        <label for="form-field">Fahrenheit value</label>
-                        <input id="txtFahrenheit" type="number" 
-                        onclick="temperatureConverter(this.value)"
-                        onchange="temperatureConverter(this.value)">
+    <body>
+        <div id="container">
+            <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+            <!--Fahrenheit card-->
+            <div id="fahrenheit-card">
+                <div class="card">
+                    <div class="card-title">Fahrenheit to Celsius Converter</div>
+                        <div class="card-content">
+                            <div class="form">
+                                <label for="form-field">Fahrenheit value</label>
+                                <input id="txtFahrenheit" type="number" name="fahrenheit"
+                                    onclick="temperatureConverter(this.value)"
+                                    onchange="temperatureConverter(this.value)">
+                            </div>
+                                <div class="form-field">
+                                    <button class="btn btn-primary full-width">Convert Temperature</button>
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <!--Return link-->
-        <p id="txtMyWorld"></p>
-        <a href="../index.html" class="return-home">Return</a>
-    </div>
-    
-</body>
+            <!--Return link-->
+            <p id="txtMyWorld"></p>
+            <a href="../index.html" class="return-home">Return</a>
+        </div>  
+        <script src="temp-conversion.js"></script>  
+    </body>
 </html>
