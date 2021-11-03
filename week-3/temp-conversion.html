@@ -27,15 +27,11 @@
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                         <div class="card-content">
                             <div class="form">
-                                <p>
-                                    <label for="txtFahrenheit">Fahrenheit value</label>
-                                    <input id="txtFahrenheit" class="input" type="text" name="fahrenheit"
-                                    onclick="temperatureConverter(this.value)"
-                                    onchange="temperatureConverter(this.value)">
-                                </p>
+                                    <label for="txtFahrenheit">Fahrenheit value:</label>
+                                    <input id="txtFahrenheit" class="input" type="text" name="fahrenheit">
                             </div>
                                 <div class="form-field">
-                                    <button type="button" class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
+                                    <button onclick="myFunction()" class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
                                 </div>
                         </div>
                     </div>
@@ -58,8 +54,11 @@
             <a href="../index.html" class="return-home">Return</a>
         </div>  
         <script >
-            function 
-            let fahrenheit =
+            function  myFunction(){
+                document.getElementById("btnConvert").innerHTML = ""
+            }
+            let fahrenheit = "txtFahrenheit";
+            
         </script>  
     </body>
 </html>
