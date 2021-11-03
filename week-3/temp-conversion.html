@@ -27,14 +27,19 @@
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                         <div class="card-content">
                             <div class="form">
-                                <label for="form-field">Fahrenheit value</label>
-                                <input id="txtFahrenheit" type="number" name="fahrenheit"
+                                <p>
+                                    <label for="form-field">Fahrenheit value</label>
+                                    <input id="txtFahrenheit" class="input" type="text" name="fahrenheit"
                                     onclick="temperatureConverter(this.value)"
                                     onchange="temperatureConverter(this.value)">
+                                </p>
                             </div>
                                 <div class="form-field">
                                     <button class="btn btn-primary full-width">Convert Temperature</button>
                                 </div>
+                            <!--Celsius Card-->
+                            <div class="card-title">Conversion Results</div>
+                                <p>Celsius: <span id="outputCelcius"></span></p>
                         </div>
                     </div>
                 </div>
