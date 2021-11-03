@@ -20,8 +20,19 @@
 <body>
     <div id="container">
         <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
-        <div class="card">
-            <div class="card-title">Fahrenheit to Celsius Converter</div>
+
+        <div id="fahrenheit-card">
+            <div class="card">
+                <div class="card-title">Fahrenheit to Celsius Converter</div>
+                <div class="card-content">
+                    <div class="form">
+                        <label for="form-field">Fahrenheit value</label>
+                        <input id="txtFahrenheit" type="number" 
+                        onclick="temperatureConverter(this.value)"
+                        onchange="temperatureConverter(this.value)">
+                    </div>
+                </div>
+            </div>
         </div>
     <!--Return link-->
         <p id="txtMyWorld"></p>
