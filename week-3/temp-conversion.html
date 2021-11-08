@@ -23,17 +23,18 @@
             <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
             
             <!--Fahrenheit card-->
-            <div id="fahrenheit-card">
+            <div id="card-container">
                 <div class="card">
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                         <div class="card-content">
                             <div class="form">
                                 <div class= "form-field">
                                     <label for="txtFahrenheit">Fahrenheit value:</label>
-                                    <input id="txtFahrenheit" class="input" type="number" name="fahrenheit">
+                                    <input id="txtFahrenheit" class="input" type="text" name="fahrenheit">
                                 </div>
+
                                 <div class="form-field">
-                                    <button class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
+                                    <button class="btn btn-primary full-width" id="btnSubmit">Convert Temperature</button>
                                 </div>
                             </div>
                         </div>
@@ -52,8 +53,10 @@
             <!--Return link-->
             <p id="txtMyWorld"></p>
             <a href="../index.html" class="return-home">Return</a> 
+
         <script >
             document.getElementById("btnSubmit").onclick = function() {
+                
                 // Input value from txtFahrenheit and assign to variable
                 let fahrenheit = document.getElementById("txtFahrenheit").value;
 

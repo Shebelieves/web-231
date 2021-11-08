@@ -19,3 +19,19 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
     background-color: #D6a800;
     color:#4F3674;
 }
+
+/*Card styling*/
+.card{
+    box-shadow: 1 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title{
+    text-align: center;
+    font-size: 2em;
+    color: #4f3674;
+    font-weight: 400;
+}
+
+.card-content{
+    padding: 2px 16px;
+}
