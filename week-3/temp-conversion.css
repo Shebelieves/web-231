@@ -16,7 +16,7 @@ body{
     font-size: 28px;
 }
 
-#form-results-example{
+#form-results-example, #form-example, #form-results-example{
     width: 600px;
     margin: 3% auto 0;
 }
