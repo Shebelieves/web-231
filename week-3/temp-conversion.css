@@ -2,7 +2,14 @@
 #container{
     padding: 10px;
 }
+body{
+    font-size: 28px;
+    padding-left: 20px;
+}
 
+#conversion-results{
+    text-align: center;
+}
 
 .fahrenheit-card{
     width:600px;

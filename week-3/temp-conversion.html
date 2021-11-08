@@ -21,44 +21,48 @@
     <body>
         <div id="container">
             <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+            
             <!--Fahrenheit card-->
             <div id="fahrenheit-card">
                 <div class="card">
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                         <div class="card-content">
                             <div class="form">
+                                <div class= "form-field">
                                     <label for="txtFahrenheit">Fahrenheit value:</label>
                                     <input id="txtFahrenheit" class="input" type="number" name="fahrenheit">
-                            </div>
-                                <div class="form-field">
-                                    <button onclick="myFunction()" class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
                                 </div>
+                                <div class="form-field">
+                                    <button class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                             <!--Conversion Card-->
             <div id="form-results-conversion">
                 <div class="card">
                     <div class="card-title">Conversion Results</div>
                         <div class="card-content">
-                        <!--Conversion results-->
-                        </div>
-                </div>
+                            <div id="conversion-results"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Return link-->
             <p id="txtMyWorld"></p>
-            <a href="../index.html" class="return-home">Return</a>
-        </div>  
+            <a href="../index.html" class="return-home">Return</a> 
         <script >
-            function  myFunction(){
-                document.getElementById("btnConvert").innerHTML = ""
-            }
-            let fahrenheit = "txtFahrenheit";
+            document.getElementById("btnSubmit").onclick = function() {
+                // Input value from txtFahrenheit and assign to variable
+                let fahrenheit = document.getElementById("txtFahrenheit").value;
 
+                //Assigned variable converts results fahrenheit to celsius
+                let results = ((parsFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+            
+                // Variable results 
+                document.getElementById("conversion-results").innerHTML = results;
+            }
         </script>  
     </body>
 </html>
