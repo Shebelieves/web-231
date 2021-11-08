@@ -33,13 +33,13 @@
                             <div class="form">
 
                                 <div class= "form-field">
-                                    <label for="Fahrenheit">Fahrenheit value:</label>
+                                    <label for="txtFahrenheit">Fahrenheit value:</label>
                                     <input type="text" class="input" id="txtFahrenheit" name="fahrenheit" />
                                 </div>
 
                                 <div class="form-field">
                                     <!--Onclick event-->
-                                    <button onclick="convertToCelsius(this.value)" class="btnSubmit" class="btn btn-primary full-width">Convert Temperature</button>
+                                    <button onclick="convertToCelsius(this.value)" id="btnSubmit" class="btn btn-primary full-width">Convert Temperature</button>
                                 </div>
                             </div>
                         </div>
@@ -60,8 +60,6 @@
 
             <!--Return link-->
              <a href="../index.html" class="return-home">Return</a> 
-        </div>
-        </div>
 
         <script >
             var fahrenheit = document.getElementById('txtFahrenheit');
