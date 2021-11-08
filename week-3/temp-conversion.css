@@ -10,3 +10,13 @@ body{
 #conversion-results{
     text-align: center;
 }
+
+.app-header{
+    text-align: center;
+    font-size: 28px;
+}
+
+#form-results-example{
+    width: 600px;
+    margin: 3% auto 0;
+}
