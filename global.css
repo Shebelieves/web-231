@@ -35,3 +35,25 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
 .card-content{
     padding: 2px 16px;
 }
+
+/*Form styling*/
+.form{
+    display: inline-grid;
+}
+
+.form-field{
+    padding: 20px;
+}
+
+/*Button Styling*/
+.btn{
+    border:none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: black;
+}
