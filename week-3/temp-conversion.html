@@ -63,7 +63,7 @@
                 let fahrenheit = document.getElementById("txtFahrenheit").value;
 
                 //Assigned variable converts results fahrenheit to celsius
-                let results = ((parsFloat(fahrenheit) - 32) / 1.8).toFixed(2);
+                let results = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
             
                 // Variable results 
                 document.getElementById("conversion-results").innerHTML = results;
