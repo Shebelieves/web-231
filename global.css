@@ -57,3 +57,17 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
     padding: 15px 32px;
     color: black;
 }
+
+.btn-primary{
+    background-color: #4f3674;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: #d6a800;
+    color: #4f3674;
+}
+
+.full-width{
+    width: 100%;
+}
