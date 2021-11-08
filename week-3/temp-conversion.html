@@ -26,18 +26,19 @@
             <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
             
             <!--Fahrenheit card-->
-            <div id="card-container">
+            <div id="card-example">
                 <div class="card">
                     <div class="card-title">Fahrenheit to Celsius Converter</div>
                         <div class="card-content">
                             <div class="form">
                                 <div class= "form-field">
-                                    <label for="txtFahrenheit">Fahrenheit value:</label>
+                                    <label for="Fahrenheit">Fahrenheit value:</label>
                                     <input type="text" class="input" id="txtFahrenheit" name="fahrenheit" />
                                 </div>
 
                                 <div class="form-field">
-                                    <button class="btn btn-primary full-width" id="btnSubmit">Convert Temperature</button>
+                                    <!--Onclick event-->
+                                    <button onclick="convertToCelsius(this.value)" class="btnSubmit" class="btn btn-primary full-width">Convert Temperature</button>
                                 </div>
                             </div>
                         </div>
@@ -49,26 +50,26 @@
                     <div class="card-title">Conversion Results:</div>
                         <div class="card-content">
                             <div id="conversion-results"></div>
+                            <span id="results"></span>
                         </div>
                     </div>
                 </div>
-            </div>
+
             <!--Return link-->
              <a href="../index.html" class="return-home">Return</a> 
         </div>
+        </div>
 
         <script >
-            document.getElementById("btnSubmit").onclick = function() {
+            var fahrenheit = document.getElementById('txtFahrenheit');
 
-                // Input value from txtFahrenheit and assign to variable
-                let fahrenheit = document.getElementById("txtFahrenheit").value;
+                // Converts function when user clicks button
+                document.getElementById("btnSubmit").onclick = function() {convertToCelsius()};
 
-                //Assigned variable converts results fahrenheit to celsius
-                let results = ((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2);
-            
-                // Variable results 
-                document.getElementById("conversion-results").innerHTML = results;
-            }
+                //Conversion function formula to calculate fahrenheit
+                function convertToCelsius() {
+                    document.getElementById("results").innerHTML = ((parseFloat(fahrenheit.value) - 32) / 1.8).toFixed(2);
+                    }
         </script>  
     </body>
 </html>
