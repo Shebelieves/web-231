@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="form-field">
-                            <button onClick="myNumber()" class="btn btn-primary full-width" id="btnSubmit">Submit</button>
+                            <button onClick="myNumber();" class="btn btn-primary full-width" id="btnSubmit">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -51,8 +51,10 @@
         </div>
         
             <script>
-               const rnd = Math.floor((Math.random() * 10 + 1);
-                document.getElementById(myNumber).innerHTML=x;
+               functon myNumber(){
+                   Math.random();
+                   document.getElementById("myNumber").innerHTML = rand;
+               }
             </script>
     </body>
 </html>
