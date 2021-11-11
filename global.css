@@ -30,7 +30,7 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
 
 .card-title{
     text-align: center;
-    font-size: 2em;
+    font-size: 28px;
     color: #4f3674;
     font-weight: 400;
 }
@@ -42,6 +42,7 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
 
 .card-content{
     padding: 2px 16px;
+
 }
 
 /*Form styling*/
