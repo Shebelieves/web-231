@@ -45,16 +45,33 @@
             <div class="card">
                 <div class="card-title">Results</div>
                 <div class="card-content">
+                    <div id="number-results"></div>
                     <!--Results from the form submission will go here..-->
                 </div>
             </div>
         </div>
+
+        <!--Return link-->
+        <a href="../index.html" class="return-home">Return</a>
         
             <script>
-               function myNumber(){
-                   var rand = Math.floor(Math.random() * 10) + 1;
-                   document.getElementById("myNumber").innerHTML = rand;
-               }
+                   const rnd = Math.floor(Math.random() * 10 + 1);
+
+                   document.getElementById("btnSubmit").onclick = function numberGame () {
+                    
+                    let myNumber = document.getElementById("txtMyNumber").value;
+
+                    if (myNumber > rnd) {
+                    document.getElementById("number-results").innerHTML = "The number is less than" + myNumber; 
+                    
+                    }
+                    else if (myNumber < rnd) {
+                        document.getElementById("number-results").innerHTML = "The number is greater than" + myNumber;
+                    }
+                    else (myNumber === rnd) 
+                        document.getElementById("number-results").innerHTML = "Congratulations! You picked the correct number!" + myNumber;
+                    }
+                    
             </script>
     </body>
 </html>
