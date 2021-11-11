@@ -6,6 +6,9 @@ Date: October 27,1021
 Description: CSS requirements for return link provided from WEB 231 assignments.
 */
 
+body{
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
 
 /* Return link style*/
 .return-home:link{
@@ -42,7 +45,7 @@ Description: CSS requirements for return link provided from WEB 231 assignments.
 
 .card-content{
     padding: 2px 16px;
-
+    font-size: 28px
 }
 
 /*Form styling*/
