@@ -26,4 +26,5 @@ body{
 #form-results-example, #form-example{
     width: 600px;
     margin: 3% auto 0;
+    text-align: center;
 }
