@@ -14,6 +14,7 @@ body{
 .return-home:link{
     color:#4F3674;
     text-decoration: none;
+    font-size: medium;
 }
 .return-home:visited{
     background-color: #3c275a;
