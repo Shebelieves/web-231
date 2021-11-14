@@ -33,7 +33,7 @@
                     <div class="card-title">Pick a number between 1 and 10</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="txtMyNumber">Guess the number</label>
+                            <label for="txtMyNumber" class="label">Guess the number</label>
                             <input type="text" class="input" id="txtMyNumber" name="myNumber" />
                         </div>
                         <!--Button-->
@@ -58,7 +58,8 @@
         <!--Return link-->
         <a href="../index.html" class="return-home">Return</a>
         
-            <script>
+           <!--JavaScript-->
+           <script>
                    const rnd = Math.floor(Math.random() * 10 + 1);
 
                    //This function retrieves number the user enters in form field.
