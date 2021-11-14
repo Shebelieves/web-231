@@ -1,3 +1,11 @@
+/*
+Title: WEB231 CSS File
+Author: Professor Krasso
+Modified by: Shelaine Walters
+Date: November 9,1021
+Description: CSS requirements provided from WEB 231 assignments.
+*/
+
 #container{
     padding: 10px;
 }
@@ -18,7 +26,5 @@ body{
     font-size: 28px;
 }
 
-.h1{
-    text-align: center;
-}
+
 
