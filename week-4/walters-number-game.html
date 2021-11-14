@@ -60,17 +60,22 @@
             <script>
                    const rnd = Math.floor(Math.random() * 10 + 1);
 
+                   //This function retrieves number the user enters in form field.
                    document.getElementById("btnSubmit").onclick = function numberGame () {
                     
+                    //This variable represents the number the user inputted.
                     let myNumber = document.getElementById("txtMyNumber").value;
-
+                    
+                    //This statement represents if inputted number is greater than random number
                     if (myNumber > rnd) {
                     document.getElementById("number-results").innerHTML = "The number is less than "  + myNumber; 
                     
                     }
+                    //This statement represents inputted number less than random number
                     else if (myNumber < rnd) {
                         document.getElementById("number-results").innerHTML = "The number is greater than "  + myNumber;
                     }
+                    //This statement represents correct number guessed
                     else {
                         document.getElementById("number-results").innerHTML = "Congratulations! You picked the correct number!";
                     }
