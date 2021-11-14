@@ -7,7 +7,7 @@ Description: CSS requirements provided from WEB 231 assignments.
 Code attribution: Based on style provided by assignment
 */
 
-#container{
+.container{
     padding: 10px;
 }
 
