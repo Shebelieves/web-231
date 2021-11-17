@@ -24,6 +24,40 @@
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
 <body>
-    
+    <body>
+        <div id="container">
+        <h1 class="app-header">Welcome To The Sequence Game!</h1>
+            <!--Card for pick a Number-->
+            <div id="card-example">
+                <div class="card">
+                    <div class="card-title">Sequence Selection Form</div>
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="txtMyNumber" class="label">Choose a number</label>
+                            <input type="text" class="input" id="txtMyNumber" name="myNumber" />
+                        </div>
+                        <!--Button-->
+                        <div class="form-field">
+                            <button onClick="myNumber();" class="btn btn-primary full-width" id="btnSubmit">Display Sequence</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--Results card-->
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Sequence Results</div>
+                <div class="card-content">
+                    <div id="number-results"></div>
+                    <!--Results from the form submission will go here..-->
+                </div>
+            </div>
+        </div>
+
+        <!--Return link-->
+        <a href="../index.html" class="return-home">Return</a>
+        
+           <!--JavaScript-->
 </body>
 </html>
