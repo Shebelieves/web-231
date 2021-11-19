@@ -4,7 +4,7 @@
     Modified by: Shelaine Walters
     Date: November 17, 2021
     Description: HTML for assignment 4.2 for WEB 231 Bellevue University
-    Code attribution: 
+    Code attribution: https://www.w3schools.com/tags/tag_select.asp
 -->
 
 <!DOCTYPE html>
@@ -27,22 +27,25 @@
     <body>
         <div id="container">
         <h1 class="app-header">Welcome To The Sequence Game!</h1>
-            <!--Card for pick a Number-->
+            <!--Card for Sequence Selection-->
             <div id="card-example">
                 <div class="card">
                     <div class="card-title">Sequence Selection Form</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="txtMyNumber" class="label">Choose a number sequence:</label>
-                            <select name ="--Select--" id="select">
+                            <label for="sequence">Choose a number sequence:</label>
+                            <!--Selection box-->
+                            <select id="sequence" name="sequence" class="drop-down-menu">
+                                <option value="select">--Select--</option>
                                 <option value="fibonacci">Finonacci Sequence</option>
                                 <option value="even">Even Numbers</option>
                                 <option value="odd">Odd Numbers</option>
                             </select>
+                            
                         </div>
                         <!--Button-->
                         <div class="form-field">
-                            <button onClick="myNumber();" class="btn btn-primary full-width" id="btnDisplaySequence">Display Sequence</button>
+                            <button type="submit" class="btn btn-primary full-width" id="btnDisplaySequence">Display Sequence</button>
                         </div>
                     </div>
                 </div>
@@ -53,8 +56,8 @@
             <div class="card">
                 <div class="card-title">Sequence Results</div>
                 <div class="card-content">
-                    <div id="number-results"></div>
-                    <!--Results from the form submission will go here..-->
+                    <div id="sequence-results"></div>
+                    <!--Results from the selector will go here..-->
                 </div>
             </div>
         </div>
@@ -63,5 +66,22 @@
         <a href="../index.html" class="return-home">Return</a>
         
            <!--JavaScript-->
+
+           <script>
+               document.getElementById("btnDisplaySequence").onclick = function displaySequence() {
+                  let choice = document.getElementById("sequence").value; // Capturing the choice selected.
+
+                  if (choice === "fibonacci") {
+                      let num1 = 0, num2 = 1, next;
+                      let fibonacciSequenceText = 0;
+                      while (num1 < 40) {
+                          fibonacciSequenceText = fibonacciSequenceText + num1 + ",";
+                          next = num1 + num2;
+                          num1 = num2;
+                          num2 = next;
+                      }
+                  }
+              
+            </script>
 </body>
 </html>
