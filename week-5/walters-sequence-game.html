@@ -6,6 +6,7 @@
     Description: HTML for assignment 4.2 for WEB 231 Bellevue University
     Code attribution: https://www.w3schools.com/tags/tag_select.asp
     Code Attribution: Joel Hartung
+    Code Attribution:https://www.geeksforgeeks.org/if-else-statement-in-javascript/?ref=lbp if/else
     Code Attribution Professor Krasso Assignment 5 Word Document for Fibonacci Code
 -->
 
@@ -25,7 +26,6 @@
 
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
-<body>
     <body>
         <div id="container">
         <h1 class="app-header">Welcome To The Sequence Game!</h1>
@@ -35,7 +35,7 @@
                     <div class="card-title">Sequence Selection Form</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="sequence">Choose a number sequence:</label>
+                            <label for="sequence" class="choose-title">Choose a number sequence:</label>
                             <!--Selection box-->
                             <select id="sequence" name="sequence" class="drop-down-menu">
                                 <option value="select">--Select--</option>
@@ -69,7 +69,7 @@
         
            <!--JavaScript-->
 
-           <script>
+        <script>
                document.getElementById("btnDisplaySequence").onclick = function displaySequence() {
                   let choice = document.getElementById("sequence").value; // Capturing the choice selected.
                 //Fibonacci Sequence formula
@@ -108,8 +108,11 @@
                                  }
                     document.getElementById("sequence-results").innerHTML = oddSequenceText.slice(0,-2);
                     }
+                    // error message when select is selected
+                else if (choice === "select") {
+                    alert("Invalid selection, please try again!");
                 }
-              
-            </script>
-</body>
+            }             
+        </script>
+    </body>
 </html>
