@@ -5,6 +5,8 @@
     Date: November 17, 2021
     Description: HTML for assignment 4.2 for WEB 231 Bellevue University
     Code attribution: https://www.w3schools.com/tags/tag_select.asp
+    Code Attribution: Joel Hartung
+    Code Attribution Professor Krasso Assignment 5 Word Document for Fibonacci Code
 -->
 
 <!DOCTYPE html>
@@ -37,7 +39,7 @@
                             <!--Selection box-->
                             <select id="sequence" name="sequence" class="drop-down-menu">
                                 <option value="select">--Select--</option>
-                                <option value="fibonacci">Finonacci Sequence</option>
+                                <option value="fibonacci">Fibonacci Sequence</option>
                                 <option value="even">Even Numbers</option>
                                 <option value="odd">Odd Numbers</option>
                             </select>
@@ -70,17 +72,43 @@
            <script>
                document.getElementById("btnDisplaySequence").onclick = function displaySequence() {
                   let choice = document.getElementById("sequence").value; // Capturing the choice selected.
-
+                //Fibonacci Sequence formula
                   if (choice === "fibonacci") {
                       let num1 = 0, num2 = 1, next;
                       let fibonacciSequenceText = 0;
                       while (num1 < 40) {
-                          fibonacciSequenceText = fibonacciSequenceText + num1 + ",";
+                          fibonacciSequenceText = fibonacciSequenceText + num1 + ", ";
                           next = num1 + num2;
                           num1 = num2;
                           num2 = next;
+                          console.log("The Fibonacci Sequence is " + fibonacciSequenceText);
                       }
+                      document.getElementById("sequence-results").innerHTML = fibonacciSequenceText.slice(0,-2); //capturing selection for Fibonacci Sequence
                   }
+                // Even number selection
+                  else if (choice === "even") {
+                        let num = 0;
+                        let evenSequenceText = 0;
+                      do {
+                            num = num + 2;
+                            evenSequenceText = evenSequenceText + num + " , ";
+                      console.log("The Even Sequence is " + evenSequenceText);
+                    }
+                    while (num < 20)
+                    document.getElementById("sequence-results").innerHTML = evenSequenceText.slice(0,-2);
+                    }
+
+                // Odd number selection
+                    else if (choice === "odd") {
+                        oddSequenceText = 0;
+                        for (let num = 1;
+                                 num < 20;
+                                 num = num + 2) {
+                                 oddSequenceText = oddSequenceText + num + ", ";
+                                 }
+                    document.getElementById("sequence-results").innerHTML = oddSequenceText.slice(0,-2);
+                    }
+                }
               
             </script>
 </body>
