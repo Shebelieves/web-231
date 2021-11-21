@@ -81,7 +81,7 @@
                           next = num1 + num2;
                           num1 = num2;
                           num2 = next;
-                          console.log("The Fibonacci Sequence is " + fibonacciSequenceText);
+                          console.log("The Fibonacci Sequence is " + fibonacciSequenceText); //console testing purposes
                       }
                       document.getElementById("sequence-results").innerHTML = fibonacciSequenceText.slice(0,-2); //capturing selection for Fibonacci Sequence
                   }
@@ -92,7 +92,7 @@
                       do {
                             num = num + 2;
                             evenSequenceText = evenSequenceText + num + " , ";
-                      console.log("The Even Sequence is " + evenSequenceText);
+                      console.log("The Even Sequence is " + evenSequenceText); // console testing purposes
                     }
                     while (num < 20)
                     document.getElementById("sequence-results").innerHTML = evenSequenceText.slice(0,-2);
@@ -106,6 +106,7 @@
                                  num = num + 2) {
                                  oddSequenceText = oddSequenceText + num + ", ";
                                  }
+                                 console.log("The Odd Sequence is " + oddSequenceText); // console testing purposes
                     document.getElementById("sequence-results").innerHTML = oddSequenceText.slice(0,-2);
                     }
                     // error message when select is selected
