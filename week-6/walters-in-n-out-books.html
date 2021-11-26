@@ -96,16 +96,16 @@
                         <th>Genre</th>
                     </tr>
                     <tr>
-                        <td id="txtAuthorNameOne"></td>
-                        <td id="txtAuthorGenreOne"></td>
+                        <td id="txtAuthorOneName"></td>
+                        <td id="txtAuthorOneGenre"></td>
                     </tr>
                     <tr>
-                        <td id="txtAuthorNameTwo"></td>
-                        <td id="txtAuthorGenreTwo"></td>
+                        <td id="txtAuthorTwoName"></td>
+                        <td id="txtAuthorTwoGenre"></td>
                     </tr>
                     <tr>
-                        <td id="txtAuthorNameThree"></td>
-                        <td id="txtAuthorGenreThree"></td>
+                        <td id="txtAuthorThreeName"></td>
+                        <td id="txtAuthorThreeGenre"></td>
                     </tr>
                 </table>
             </div>
@@ -116,29 +116,87 @@
            <!--JavaScript-->
         
            <script>
-               document.getElementById("btnDisplayListing").onclick = function displayListing() {
+               let books = document.getElementById("favorite-books");
+               let authors = document.getElementById("favorite-authors");
+               //on page load boxes are hidden
+               books.style.display = 'none';
+               authors.style.display = 'none';
+
+               document.getElementById("btnDisplayListing").onclick = function () {
                 let choice = document.getElementById('favoriteList').value;
                 console.log(choice);
-
+            //Hides table until selected
                 if (choice === 'select') {
                     books.style.display = 'none';
                     authors.style.display = 'none';
                 }
 
-                else if (choice === 'books'){
-                    books.style.display = 'none';
+                else if (choice === 'books') {
+                    books.style.display = 'block';
                     authors.style.display = 'none';
                 }
 
                 else if (choice === 'authors') {
                     books.style.display = 'none';
-                    authors.style.display = 'none';
+                    authors.style.display = 'block';
                 }
 
-                //storing object data
+                //storing and declaring book object data
 
-                const book1 = {
+                const bookOne = {
+                    isbn: "9781838851392",
+                    title: "Shadow King",
+                    pages: "448"
+                };
 
-                }
-               }
+                const bookTwo = {
+                    isbn: "978188456017",
+                    title: "Egyptian Yoga",
+                    pages: "244"
+                }; 
+
+                const bookThree = {
+                    isbn: "9781401954970",
+                    title: "Everything Is Here To Help You",
+                    pages: "236"
+                };
+
+                //Storing data for author object
+
+                const authorOne = {
+                    name: "Maaza Mengiste",
+                    genre: "Historical Fiction"
+                };
+
+                const authorTwo = {
+                    name: "Dr. Ashby Muata",
+                    genre: "Philosophy"
+                };
+
+                const authorThree = {
+                    name: "Matt Kahn",
+                    genre: "Self-Help"
+                };
+            //
+                document.getElementById("txtBookOneISBN").innerHTML = bookOne.isbn;
+                document.getElementById("txtBookTwoISBN").innerHTML = bookTwo.isbn;
+                document.getElementById("txtBookThreeISBN").innerHTML = bookThree.isbn;
+
+                document.getElementById("txtBookOneTitle").innerHTML = bookOne.title;
+                document.getElementById("txtBookTwoTitle").innerHTML = bookTwo.title;
+                document.getElementById("txtBookThreeTitle").innerHTML = bookThree.title;
+
+                document.getElementById("txtBookOnePages").innerHTML = bookOne.pages;
+                document.getElementById("txtBookTwoPages").innerHTML = bookTwo.pages;
+                document.getElementById("txtBookThreePages").innerHTML = bookThree.pages;
+
+                document.getElementById("txtAuthorOneName").innerHTML = authorOne.name;
+                document.getElementById("txtAuthorTwoName").innerHTML = authorTwo.name;
+                document.getElementById("txtAuthorThreeName").innerHTML = authorThree.name;
+
+
+
+            };
+
+
            </script>
