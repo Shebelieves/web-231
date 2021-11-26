@@ -177,7 +177,7 @@
                     name: "Matt Kahn",
                     genre: "Self-Help"
                 };
-            //
+            // Retrieves declared book objects
                 document.getElementById("txtBookOneISBN").innerHTML = bookOne.isbn;
                 document.getElementById("txtBookTwoISBN").innerHTML = bookTwo.isbn;
                 document.getElementById("txtBookThreeISBN").innerHTML = bookThree.isbn;
@@ -190,11 +190,14 @@
                 document.getElementById("txtBookTwoPages").innerHTML = bookTwo.pages;
                 document.getElementById("txtBookThreePages").innerHTML = bookThree.pages;
 
+            //Retrieves declared author objects
                 document.getElementById("txtAuthorOneName").innerHTML = authorOne.name;
                 document.getElementById("txtAuthorTwoName").innerHTML = authorTwo.name;
                 document.getElementById("txtAuthorThreeName").innerHTML = authorThree.name;
 
-
+                document.getElementById("txtAuthorOneGenre").innerHTML = authorOne.genre;
+                document.getElementById("txtAuthorTwoGenre").innerHTML = authorTwo.genre;
+                document.getElementById("txtAuthorThreeGenre").innerHTML = authorThree.genre;
 
             };
 
