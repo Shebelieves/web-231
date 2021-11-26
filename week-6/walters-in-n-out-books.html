@@ -32,9 +32,9 @@
                     <div class="card-title">My Favorites</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="sequence" class="choose-title">Choose a listing:</label>
+                            <label for="favoritList" class="choose-title">Choose a listing:</label>
                             <!--Selection box-->
-                            <select id="sequence" name="sequence" class="drop-down-menu">
+                            <select id="favoriteList" name="favoriteList" class="drop-down-menu">
                                 <option value="select">--Select--</option>
                                 <option value="books">Top 3 Favorite Books</option>
                                 <option value="authors">Top 3 Favorite Authors</option>
@@ -43,24 +43,102 @@
                         </div>
                         <!--Button-->
                         <div class="form-field">
-                            <button type="submit" class="btn btn-primary full-width" id="btnDisplaySequence">Display Listing</button>
+                            <button type="submit" class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
-        <!--Results card-->
-        <div id="form-results-example">
-            <div class="card">
-                <div class="card-title">Sequence Results</div>
-                <div class="card-content">
-                    <div id="sequence-results"></div>
-                    <!--Results from the selector will go here..-->
-                </div>
+        
+    <!--Return link-->
+        <a href="../index.html" class="return-home">Return</a>
+    </div>
+
+    <!--Table for favorite books start-->
+    <div id="favorite-books" class="container">
+        <div class="card">
+            <div class="card-title">Top 3 Favorite Books</div>
+            <div class="card-content">
+                <table>
+                        <tr>
+                            <th>ISBN</th>
+                            <th>Title</th>
+                            <th>Pages</th>
+                        </tr>
+                    <tr>
+                        <td id="txtBookOneISBN"></td>
+                        <td id="txtBookOneTitle"></td>
+                        <td id="txtBookOnePages"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtBookTwoISBN"></td>
+                        <td id="txtBookTwoTitle"></td>
+                        <td id="txtBookTwoPages"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtBookThreeISBN"></td>
+                        <td id="txtBookThreeTitle"></td>
+                        <td id="txtBookThreePages"></td>
+                    </tr>
+                </table>
             </div>
         </div>
+    </div>
+    <!--Table for favorite books end-->
 
-        <!--Return link-->
-        <a href="../index.html" class="return-home">Return</a>
+    <!--Table for Favorite Author starts-->
+    <div id="favorite-authors" class="container">
+        <div class="card">
+            <div class="card-title">Top 3 Authors</div>
+            <div class="card-content">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                    </tr>
+                    <tr>
+                        <td id="txtAuthorNameOne"></td>
+                        <td id="txtAuthorGenreOne"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtAuthorNameTwo"></td>
+                        <td id="txtAuthorGenreTwo"></td>
+                    </tr>
+                    <tr>
+                        <td id="txtAuthorNameThree"></td>
+                        <td id="txtAuthorGenreThree"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
         
            <!--JavaScript-->
+        
+           <script>
+               document.getElementById("btnDisplayListing").onclick = function displayListing() {
+                let choice = document.getElementById('favoriteList').value;
+                console.log(choice);
+
+                if (choice === 'select') {
+                    books.style.display = 'none';
+                    authors.style.display = 'none';
+                }
+
+                else if (choice === 'books'){
+                    books.style.display = 'none';
+                    authors.style.display = 'none';
+                }
+
+                else if (choice === 'authors') {
+                    books.style.display = 'none';
+                    authors.style.display = 'none';
+                }
+
+                //storing object data
+
+                const book1 = {
+
+                }
+               }
+           </script>
