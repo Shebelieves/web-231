@@ -1,0 +1,67 @@
+<!--
+    Title: Assignment 6.2
+    Author: Professor Krasso
+    Modified by: Shelaine Walters
+    Date: November 25, 2021
+    Description: HTML for assignment 4.2 for WEB 231 Bellevue University
+   
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+     <!--CSS links-->
+     <link href="../global.css" type="text/css" rel="stylesheet"/>
+     <link href="walters-in-n-out-books.css" type="text/css" rel="stylesheet"/>
+
+    <title>WEB 231 - Enterprise JavaScript I</title>
+</head>
+    <body>
+        <div id="container">
+        <h1 class="app-header">Welcome To The Sequence Game!</h1>
+            <!--Card for Sequence Selection-->
+            <div id="card-example">
+                <div class="card">
+                    <div class="card-title">Sequence Selection Form</div>
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="sequence" class="choose-title">Choose a number sequence:</label>
+                            <!--Selection box-->
+                            <select id="sequence" name="sequence" class="drop-down-menu">
+                                <option value="select">--Select--</option>
+                                <option value="fibonacci">Fibonacci Sequence</option>
+                                <option value="even">Even Numbers</option>
+                                <option value="odd">Odd Numbers</option>
+                            </select>
+                            
+                        </div>
+                        <!--Button-->
+                        <div class="form-field">
+                            <button type="submit" class="btn btn-primary full-width" id="btnDisplaySequence">Display Sequence</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--Results card-->
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Sequence Results</div>
+                <div class="card-content">
+                    <div id="sequence-results"></div>
+                    <!--Results from the selector will go here..-->
+                </div>
+            </div>
+        </div>
+
+        <!--Return link-->
+        <a href="../index.html" class="return-home">Return</a>
+        
+           <!--JavaScript-->
