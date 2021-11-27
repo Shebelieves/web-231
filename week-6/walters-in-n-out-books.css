@@ -11,3 +11,20 @@ table{
     width: 100%;
     margin-bottom: 30px;
 }
+
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+td{
+    border: 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
