@@ -127,12 +127,7 @@
                 let choice = document.getElementById('favoriteList').value;
                 console.log(choice);
             //Hides table until selected
-                if (choice === 'select') {
-                    books.style.display = 'none';
-                    authors.style.display = 'none';
-                }
-
-                else if (choice === 'books') {
+                if (choice === 'books') {
                     books.style.display = 'block';
                     authors.style.display = 'none';
                 }
@@ -140,6 +135,11 @@
                 else if (choice === 'authors') {
                     books.style.display = 'none';
                     authors.style.display = 'block';
+                }
+
+                else {
+                    books.style.display = 'none';
+                    authors.style.display = 'none';
                 }
 
                 //storing and declaring book object data
