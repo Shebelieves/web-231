@@ -17,11 +17,21 @@ body{
 
 .app-header{
     text-align: center;
+    font-size: 28px;
+}
+
+.card-container{
+    width: 600px;
+    margin: 3% auto 0;
 }
 table{
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
+}
+
+.card-content{
+    font-size: medium;
 }
 
 th{
@@ -39,4 +49,10 @@ td{
     border: 1px;
     border-style: solid;
     border-color: #ddd;
+}
+
+tr:hover{
+    background-color: #d6a800;
+    color: #4F3674;
+    cursor: pointer;
 }
