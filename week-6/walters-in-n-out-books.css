@@ -19,7 +19,7 @@ body{
     text-align: center;
     font-size: 28px;
 }
-
+/*Styling for card*/
 .card-container{
     width: 600px;
     margin: 3% auto 0;
@@ -34,6 +34,9 @@ table{
     font-size: medium;
 }
 
+/*Styling for card ends*/
+
+/*Styling for list*/
 th{
     padding-top: 12px;
     padding-bottom: 12px;
@@ -50,7 +53,9 @@ td{
     border-style: solid;
     border-color: #ddd;
 }
+/*List ends*/
 
+/*Hover decor*/
 tr:hover{
     background-color: #d6a800;
     color: #4F3674;
