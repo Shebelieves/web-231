@@ -137,12 +137,6 @@
                                 <td id= "txtServicesRateThree"></td>
                                 <td id="txtServicesHourThree"></td>
                             </tr>
-                            <tr>
-                                <td id="txtServicesIdFour"></td>
-                                <td id="txtServicesDescriptionFour"></td>
-                                <td id= "txtServicesRateFour"></td>
-                                <td id="txtServicesHourFour"></td>
-                            </tr>
                         </table>
                     </div>
                 </div>
@@ -159,25 +153,80 @@
                             <th>First Name</th>
                             <th>Salary</th>
                         </tr>
+                        <tr>
+                            <td id="txtEmployeeIdOne"></td>
+                            <td id="txtLastNameOne"></td>
+                            <td id="txtFirstNameOne"></td>
+                            <td id="txtSalaryOne"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtEmployeeIdTwo"></td>
+                            <td id="txtLastNameTwo"></td>
+                            <td id="txtFirstNameTwo"></td>
+                            <td id="txtSalaryTwo"></td>
+                        </tr>
+                        <tr>
+                            <td id="txtEmployeeIdThre"></td>
+                            <td id="txtLastNameThree"></td>
+                            <td id="txtFirstNameThree"></td>
+                            <td id="txtSalaryThree"></td>
+                        </tr>
+                        <tr>
+                            <td id ="txtEmployeeIdFour"></td>
+                            <td id="txtLastNameFour"></td>
+                            <td id="txtFirstName Four"></td>
+                            <td id="txtSalaryFour"></td>
+                        </tr>
+                        <tr>
+                            <td id ="txtEmployeeIdFive"></td>
+                            <td id="txtLastNameFive"></td>
+                            <td id="txtFirstNameFive"></td>
+                            <td id="txtSalaryFive"></td>
+                        </tr>
                     </table>
                 </div>
             </div>
         </div>
         <!--Begin Javascript-->
         <script>
-            //onclick event for choice selection
-                document.getElementById("btnDisplayListing").onclick = function () {
-                    let choice = document.getElementById("listing").value;
+            //binding variables to div
+                let products = document.getElementById("products");
+                let services = document.getElementById("services");
+                let employees = document.getElementById("employees");
+             //hides table on page load
+                products.style.display = "none";
+                services.style.display = "none";
+                employees.style.display ="none";
+
+                document.getElementById("btnDisplayListing").onclick = function displayListing() {
+                    let choice = document.getElementById("listingChoice").value;
                     console.log (choice);
+
+            //reveals a table when a certain choice is selected
+                if (choice === "products") {
+                    products.style.display = "block";
+                    services.style.display= "none";
+                    employees.style.display = "none"
+                }
+            }
+
+                class products {
+                    constructor(id, description, price, quantity) {
+                        this.id = id;
+                        this.description = description;
+                        this.price = price;
+                        this.quantity = quantity;
+                    }
                 }
 
-                let products = document.getElementById("products");
-                let services = document.etElementById("services");
-                let employees = document.getElementById("employees");
-             //hides table until a choice is selected
-                products.style.display = 'none';
-                services.style.display = 'none';
-                employees.style.display ='none';
+                class services{
+                    constructor(id, description, rate, hours) {
+                        this.id = id;
+                        this.description = description;
+                        this.rate = rate;
+                        this.hours = hours;
+                    }
+                }
 
         </script>
 
