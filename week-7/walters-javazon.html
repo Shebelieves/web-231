@@ -199,7 +199,7 @@
                 employees.style.display ="none";
 
                 document.getElementById("btnDisplayListing").onclick = function displayListing() {
-                    let choice = document.getElementById("listingChoice").value;
+                    let choice = document.getElementById("listing").value;
                     console.log (choice);
 
             //reveals a table when a certain choice is selected
@@ -207,6 +207,23 @@
                     products.style.display = "block";
                     services.style.display= "none";
                     employees.style.display = "none"
+                }
+                else if (choice === "services") {
+                    products.style.display = "none";
+                    services.style.display = "block";
+                    employees.style.display = "none";
+                }
+
+                else if(choice === "employees") {
+                    products.style.display = "none";
+                    services.style.display = "none";
+                    employees.style.display = "block";
+                }
+
+                else{
+                    products.style.display = "none";
+                    services.style.display = "none";
+                    employees.style.display ="none"; 
                 }
             }
 
