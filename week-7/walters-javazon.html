@@ -34,9 +34,9 @@
                     <div class="card-title">Javazon Selection Form</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="listing" class="choose-title">Choose a listing:</label>
+                            <label for="txtListing" class="choose-title">Choose a listing:</label>
                             <!--Selection box-->
-                            <select id="listing" name="listing" class="drop-down-menu">
+                            <select id="txtListing" name="txtListing" class="drop-down-menu">
                                 <option value="select">--Select--</option>
                                 <option value="products">Products</option>
                                 <option value="services">Services</option>
@@ -198,8 +198,8 @@
                 services.style.display = "none";
                 employees.style.display ="none";
 
-                document.getElementById("btnDisplayListing").onclick = function displayListing() {
-                    let choice = document.getElementById("listing").value;
+                document.getElementById("btnDisplayListing").onclick = function () {
+                    let choice = document.getElementById("txtListing").value;
                     console.log (choice);
 
             //reveals a table when a certain choice is selected
