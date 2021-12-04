@@ -34,7 +34,7 @@
                     <div class="card-title">Javazon Selection Form</div>
                     <div class="card-content">
                         <div class="form-field">
-                            <label for="favoriteList" class="choose-title">Choose a listing:</label>
+                            <label for="listing" class="choose-title">Choose a listing:</label>
                             <!--Selection box-->
                             <select id="listing" name="listing" class="drop-down-menu">
                                 <option value="select">--Select--</option>
@@ -54,6 +54,33 @@
                 <!--Return link-->
                 <a href="../index.html" class="return-home">Return</a>
                 </div>
-        </div>
+            </div>
+
+        <!--Begin product table-->
+            <div id="products" class="card-container">
+                <div class="card">
+                    <div class="card-title">Javazon Products</div>
+                    <div class="card-content">
+                        <table>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total Value</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        <!--Begin Javascript-->
+        <script>
+            document.getElementById("btnDisplayListing").onclick = function () {
+                let choice = document.getElementById("listing").value;
+                console.log (choice);
+            }
+
+        </script>
+
     </body>
 </html>
