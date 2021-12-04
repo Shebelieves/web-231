@@ -25,3 +25,32 @@
 
     <title>WEB 231 - Enterprise JavaScript I</title>
 </head>
+    <body>
+        <div id="container">
+        <h1 class="app-header">Welcome to Javazon App!</h1>
+            <!--Card for Sequence Selection-->
+            <div id="card-example">
+                <div class="card">
+                    <div class="card-title">Javazon Selection Form</div>
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="favoriteList" class="choose-title">Choose a listing:</label>
+                            <!--Selection box-->
+                            <select id="favoriteList" name="favoriteList" class="drop-down-menu">
+                                <option value="select">--Select--</option>
+                                <option value="books">Top 3 Favorite Books</option>
+                                <option value="authors">Top 3 Favorite Authors</option>
+                            </select>
+                            
+                        </div>
+                        <!--Button-->
+                        <div class="form-field">
+                            <button type="submit" class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!--Return link-->
+                <a href="../index.html" class="return-home">Return</a>
+                </div>
+        </div>
