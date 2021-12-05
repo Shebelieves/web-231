@@ -70,39 +70,39 @@
                                 <th>Total Value</th>
                             </tr>
                             <tr>
-                                <td id="txtProductIdOne"></td>
-                                <td id="txtProductDescriptionOne"></td>
-                                <td id="txtProductPriceOne"></td>
-                                <td id="txtProductQuantityOne"></td>
-                                <td id="txtProductValueOne"></td>
+                                <td id="txtProductOneId"></td>
+                                <td id="txtProductOneDescription"></td>
+                                <td id="txtProductOnePrice"></td>
+                                <td id="txtProductOneQuantity"></td>
+                                <td id="txtProductOneValue"></td>
                             </tr>
                             <tr>
-                                <td id="txtProductIdTwo"></td>
-                                <td id="txtProductDescriptionTwo"></td>
-                                <td id="txtProductPriceTwo"></td>
-                                <td id="txtProductQuantityTwo"></td>
-                                <td id="txtProductValueTwo"></td> 
+                                <td id="txtProductTwoId"></td>
+                                <td id="txtProductTwoDescription"></td>
+                                <td id="txtProductTwoPrice"></td>
+                                <td id="txtProductTwoQuantity"></td>
+                                <td id="txtProductTwoValue"></td> 
                             </tr>
                             <tr>
-                                <td id="txtProductIdThree"></td>
-                                <td id="txtProductDescriptionThree"></td>
-                                <td id="txtProductPriceThree"></td>
-                                <td id="txtProductQuantityThree"></td>
-                                <td id="txtProductValueThree"></td>
+                                <td id="txtProductThreeId"></td>
+                                <td id="txtProductThreeDescription"></td>
+                                <td id="txtProductThreePrice"></td>
+                                <td id="txtProductThreeQuantity"></td>
+                                <td id="txtProductThreeValue"></td>
                             </tr>
                             <tr>
-                                <td id="txtProductIdFour"></td>
-                                <td id="txtProductDescriptionFour"></td>
-                                <td id="txtProductPriceFour"></td>
-                                <td id="txtProductQuantityFour"></td>
-                                <td id="txtProductValueFour"></td>
+                                <td id="txtProductFourId"></td>
+                                <td id="txtProductFourDescription"></td>
+                                <td id="txtProductFourPrice"></td>
+                                <td id="txtProductFourQuantity"></td>
+                                <td id="txtProductFourValue"></td>
                             </tr>
                             <tr>
-                                <td id="txtProductIdFive"></td>
-                                <td id="txtProductDescriptionFive"></td>
-                                <td id="txtProductPriceFive"></td>
-                                <td id="txtProductQuantityFive"></td>
-                                <td id="txtProductValueFive"></td>
+                                <td id="txtProductFiveId"></td>
+                                <td id="txtProductFiveDescription"></td>
+                                <td id="txtProductFivePrice"></td>
+                                <td id="txtProductFiveQuantity"></td>
+                                <td id="txtProductFiveValue"></td>
                             </tr>
                         </table>
                     </div>
@@ -122,20 +122,20 @@
                             </tr>
                             <tr>
                                 <td id="txtServicesIdOne"></td>
-                                <td id="txtServicesDescriptionOne"></td>
-                                <td id= "txtServicesRateOne"></td>
-                                <td id="txtServicesHourOne"></td>
+                                <td id="txtServicesOneDescription"></td>
+                                <td id= "txtServicesOneRate"></td>
+                                <td id="txtServicesOneHour"></td>
                             <tr>
                                 <td id="txtServicesIdTwo"></td>
-                                <td id="txtServicesDescriptionTwo"></td>
-                                <td id= "txtServicesRateTwo"></td>
-                                <td id="txtServicesHourTwo"></td>
+                                <td id="txtServicesTwoDescription"></td>
+                                <td id= "txtServicesTwoRate"></td>
+                                <td id="txtServicesTwohour"></td>
                             </tr>
                             <tr>
                                 <td id="txtServicesIdThree"></td>
-                                <td id="txtServicesDescriptionThree"></td>
-                                <td id= "txtServicesRateThree"></td>
-                                <td id="txtServicesHourThree"></td>
+                                <td id="txtServicesThreeDescription"></td>
+                                <td id= "txtServicesThreeRate"></td>
+                                <td id="txtServicesThreeHour"></td>
                             </tr>
                         </table>
                     </div>
@@ -154,27 +154,27 @@
                             <th>Salary</th>
                         </tr>
                         <tr>
-                            <td id="txtEmployeeIdOne"></td>
+                            <td id="txtEmployeeOneId"></td>
                             <td id="txtLastNameOne"></td>
                             <td id="txtFirstNameOne"></td>
                             <td id="txtSalaryOne"></td>
                         </tr>
                         <tr>
-                            <td id="txtEmployeeIdTwo"></td>
+                            <td id="txtEmployeeTwoId"></td>
                             <td id="txtLastNameTwo"></td>
                             <td id="txtFirstNameTwo"></td>
                             <td id="txtSalaryTwo"></td>
                         </tr>
                         <tr>
-                            <td id="txtEmployeeIdThre"></td>
+                            <td id="txtEmployeeThreeId"></td>
                             <td id="txtLastNameThree"></td>
                             <td id="txtFirstNameThree"></td>
                             <td id="txtSalaryThree"></td>
                         </tr>
                         <tr>
-                            <td id ="txtEmployeeIdFour"></td>
+                            <td id ="txtEmployeeFourId"></td>
                             <td id="txtLastNameFour"></td>
-                            <td id="txtFirstName Four"></td>
+                            <td id="txtFirstNameFour"></td>
                             <td id="txtSalaryFour"></td>
                         </tr>
                         <tr>
@@ -190,9 +190,15 @@
 
         <!--Begin Javascript-->
         <script>
+
+            //binding variables to div
+                let products = document.getElementById("products");
+                let services = document.getElementById("services");
+                let employees = document.getElementById("employees");
+
             //classes for products, services and employees
                 class Products {
-                    constructor(id, description, price, quantity){
+                    constructor(id, description, price, quantity) {
                         this.id = id;
                         this.description = description;
                         this.price = price;
@@ -203,7 +209,7 @@
                 }  
 
                 class Services {
-                    constructor(id, description, hourlyRate, min){
+                    constructor(id, description, hourlyRate, min) {
                         this.id = id;
                         this.description = description;
                         this.hourlyRate = hourlyRate.toFixed(2)
@@ -212,7 +218,7 @@
                 }
 
                 class Employees {
-                    constructor(id, firstName, lastName, salary){
+                    constructor(id, firstName, lastName, salary) {
                         this.id = id;
                         this.firstName = firstName;
                         this.lastName = lastName;
@@ -222,10 +228,10 @@
 
                 //New product objects assigned to 5 separate variables
                 let productsOne = new products("9781118008188", "HTML and CSS: Design and Build Websites", 22.26, 10);
-                let productTwo = new products("9781491952023", "JavaScript: The Definitive Guide 7/E", 41.33, 7);
+                let productsTwo = new products("9781491952023", "JavaScript: The Definitive Guide 7/E", 41.33, 7);
                 let productsThree = new products("9781449331818", "Learning JavaScript Design Patterns 1/E", 25.99, 3);
                 let productsFour = new products("Express in Action: Writing, Building, and testing Node.js applications 1/E", 34.91, 3);
-                let productFive = new products("MongoDB The Definitive Guide", 33.70, 8);
+                let productsFive = new products("MongoDB The Definitive Guide", 33.70, 8);
 
                 //New Services object assigned to 3 separate variables
                 let servicesOne = new services("100", "Website Design", 150.00, 25);
@@ -238,12 +244,8 @@
                 let employeesThree = new employees("1009", "Mozart", "Wolfgang", 19.50);
                 let employeesFour = new employees("1010", "Brahms", "Johannes", 12.00);
                 let employeesFive = new employees("1011", "Hayden", "Joseph", 32.50);
-                
-            //binding variables to div
-                let products = document.getElementById("products");
-                let services = document.getElementById("services");
-                let employees = document.getElementById("employees");
-             //hides table on page load
+
+                //hides table on page load
                 products.style.display = "none";
                 services.style.display = "none";
                 employees.style.display = "none";
