@@ -126,13 +126,13 @@
                                 <td id= "txtServicesOneRate"></td>
                                 <td id="txtServicesOneHour"></td>
                             <tr>
-                                <td id="txtServicesIdTwo"></td>
+                                <td id="txtServicesTwoId"></td>
                                 <td id="txtServicesTwoDescription"></td>
                                 <td id= "txtServicesTwoRate"></td>
-                                <td id="txtServicesTwohour"></td>
+                                <td id="txtServicesTwoHour"></td>
                             </tr>
                             <tr>
-                                <td id="txtServicesIdThree"></td>
+                                <td id="txtServicesThreeId"></td>
                                 <td id="txtServicesThreeDescription"></td>
                                 <td id= "txtServicesThreeRate"></td>
                                 <td id="txtServicesThreeHour"></td>
@@ -234,7 +234,7 @@
 
                 //New Services object assigned to 3 separate variables
                 let servicesOne = new Services("100", "Website Design", 150.00, 25);
-                let servicesTwo = new Services("DevOps Consulting", 125.00, 50);
+                let servicesTwo = new Services("101", "DevOps Consulting", 125.00, 50);
                 let servicesThree = new Services("102", "Database Design", 125.00, 15);
 
                 //New Employees objects assigned to 5 separate variables
@@ -279,6 +279,25 @@
                 document.getElementById("txtProductFiveValue").innerHTML = (productsFive.price * productsFive.quantity).toFixed(2);
 
                 //Assigning serviceOne div to a variable services.
+                document.getElementById("txtServicesOneId").innerHTML = servicesOne.id;
+                document.getElementById("txtServicesOneDescription").innerHTML = servicesOne.description;
+                document.getElementById("txtServicesOneRate").innerHTML= servicesOne.hourlyRate.toFixed(2);
+                document.getElementById("txtServicesOneHour").innerHTML =servicesOne.min;
+
+                //Assigning servicesTwo div to a variable services.
+                document.getElementById("txtServicesTwoId").innerHTML = servicesTwo.id;
+                document.getElementById("txtServicesTwoDescription").innerHTML = servicesTwo.description;
+                document.getElementById("txtServicesTwoRate").innerHTML = servicesTwo.hourlyRate.toFixed(2);
+                document.getElementById("txtServicesTwoHour").innerHTML = servicesTwo.min;
+
+                //Assigning serviceThree div to a variable services
+                document.getElementById("txtServicesThreeId").innerHTML = servicesThree.id;
+                document.getElementById("txtServicesThreeDescription").innerHTML = servicesThree.description;
+                document.getElementById("txtServicesThreeRate").innerHTML = servicesThree.hourlyRate.toFixed(2);
+                document.getElementById("txtServicesThreeHour").innerHTML = servicesThree.min;
+
+                //Assigning employeeOne div to a variable service
+                document.getElementById("txtEmployeeOneId").innerHTML = employeesOne.id;
 
                 //hides table on page load
                 products.style.display = "none";
