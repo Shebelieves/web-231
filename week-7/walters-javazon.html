@@ -189,6 +189,35 @@
         </div>
         <!--Begin Javascript-->
         <script>
+            //classes for products, services and employees
+                class Products {
+                    constructor(id, description, price, quantity){
+                        this.id = id;
+                        this.description = description;
+                        this.price = price;
+                        this.quantity = quantity;
+                        this.totalValue = this.price * this.quantity;
+                        this.totalValue = this.totalValue.toFixed(2);
+                    }
+                }  
+
+                class Services {
+                    constructor(id, description, hourlyRate, min){
+                        this.id = id;
+                        this.description = description;
+                        this.hourlyRate = hourlyRate.toFixed(2)
+                        this.min = min;
+                    }
+                }
+
+                class Employees {
+                    constructor(id, firstName, lastName, salary){
+                        this.id = id;
+                        this.firstName = firstName;
+                        this.lastName = lastName;
+                        this.salary = salary.toFixed(2);
+                    }
+                }
             //binding variables to div
                 let products = document.getElementById("products");
                 let services = document.getElementById("services");
@@ -203,24 +232,35 @@
                     console.log (choice);
 
             //reveals a table when a certain choice is selected
-                if (choice === "products") {
+                switch(choice){
+
+                    case "products":
                     products.style.display = "block";
                     services.style.display= "none";
                     employees.style.display = "none"
-                }
-                else if (choice === "services") {
+                    
+                    console.log("switch case - products selected"); //output test
+
+                    break;
+                    
+                    case "services":
+                    
                     products.style.display = "none";
                     services.style.display = "block";
                     employees.style.display = "none";
-                }
+           
+                    break;
 
-                else if(choice === "employees") {
+                case "employees":
+
                     products.style.display = "none";
                     services.style.display = "none";
                     employees.style.display = "block";
-                }
+            
+                break;
 
-                else{
+                default:
+
                     products.style.display = "none";
                     services.style.display = "none";
                     employees.style.display ="none"; 
