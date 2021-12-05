@@ -205,17 +205,13 @@
                         this.quantity = quantity;
                     }
                   
-                    totalValue() {
-                        let total = this.quantity * this.price;
-                        return total.toFixed(2);
-                    }
                 }
 
                 class Services {
                     constructor(id, description, hourlyRate, min) {
                         this.id = id;
                         this.description = description;
-                        this.hourlyRate = hourlyRate.toFixed(2)
+                        this.hourlyRate = hourlyRate;
                         this.min = min;
                     }
                 }
@@ -225,7 +221,7 @@
                         this.id = id;
                         this.firstName = firstName;
                         this.lastName = lastName;
-                        this.salary = salary.toFixed(2);
+                        this.salary = salary;
                     }
                 }
 
@@ -233,8 +229,8 @@
                 let productsOne = new Products("9781118008188", "HTML and CSS: Design and Build Websites", 22.26, 10);
                 let productsTwo = new Products("9781491952023", "JavaScript: The Definitive Guide 7/E", 41.33, 7);
                 let productsThree = new Products("9781449331818", "Learning JavaScript Design Patterns 1/E", 25.99, 3);
-                let productsFour = new Products("Express in Action: Writing, Building, and testing Node.js applications 1/E", 34.91, 3);
-                let productsFive = new Products("MongoDB The Definitive Guide", 33.70, 8);
+                let productsFour = new Products("9781617292422", "Express in Action: Writing, Building, and testing Node.js applications 1/E", 34.91, 3);
+                let productsFive = new Products("9781491954461", "MongoDB The Definitive Guide", 33.70, 8);
 
                 //New Services object assigned to 3 separate variables
                 let servicesOne = new Services("100", "Website Design", 150.00, 25);
@@ -251,36 +247,36 @@
                 //Assigning productsOne div to a Variable
                 document.getElementById("txtProductOneId").innerHTML = productsOne.id;
                 document.getElementById("txtProductOneDescription").innerHTML = productsOne.description;
-                document.getElementById("txtProductOnePrice").innerHTML = productsOne.price;
+                document.getElementById("txtProductOnePrice").innerHTML = productsOne.price.toFixed(2);
                 document.getElementById("txtProductOneQuantity").innerHTML = productsOne.quantity;
-                document.getElementById("txtProductOneValue").innerHTML = productsOne.value;
+                document.getElementById("txtProductOneValue").innerHTML = (productsOne.price * productsOne.quantity).toFixed(2);
 
                 //Assigning productsTwo Variables
                 document.getElementById("txtProductTwoId").innerHTML = productsTwo.id;
                 document.getElementById("txtProductTwoDescription").innerHTML = productsTwo.description;
-                document.getElementById("txtProductTwoPrice").innerHTML = productsTwo.price;
-                document.getElementById("txtProductTwoQuantity").innerHTML = productsOne.quantity;
-                document.getElementById("txtProductTwoValue").innerHTML = productsTwo.value;
+                document.getElementById("txtProductTwoPrice").innerHTML = productsTwo.price.toFixed(2);
+                document.getElementById("txtProductTwoQuantity").innerHTML = productsTwo.quantity;
+                document.getElementById("txtProductTwoValue").innerHTML = (productsTwo.price * productsTwo.quantity).toFixed(2);
                 
                 //Assigning productsThree Variables
                 document.getElementById("txtProductThreeId").innerHTML = productsThree.id;
                 document.getElementById("txtProductThreeDescription").innerHTML = productsThree.description;
-                document.getElementById("txtProductThreePrice").innerHTML = productsThree.price;
+                document.getElementById("txtProductThreePrice").innerHTML = productsThree.price.toFixed(2);
                 document.getElementById("txtProductThreeQuantity").innerHTML = productsThree.quantity;
-                document.getElementById("txtProductThreeValue").innerHTML = productsThree.value;
+                document.getElementById("txtProductThreeValue").innerHTML = (productsThree.value * productsThree.quantity).toFixed(2);
                 //Assigning productsFour Variables
                 document.getElementById("txtProductFourId").innerHTML = productsFour.id;
                 document.getElementById("txtProductFourDescription").innerHTML = productsFour.description;
-                document.getElementById("txtProductFourPrice").innerHTML = productsFour.price;
+                document.getElementById("txtProductFourPrice").innerHTML = productsFour.price.toFixed(2);
                 document.getElementById("txtProductFourQuantity").innerHTML = productsFour.quantity;
-                document.getElementById("txtProductFourValue").innerHTML = productsFour.value;
+                document.getElementById("txtProductFourValue").innerHTML = (productsFour.value * productsFour.quantity).toFixed(2);
 
                 //Assigning productFive Variables
                 document.getElementById("txtProductFiveId").innerHTML = productsFive.id;
                 document.getElementById("txtProductFiveDescription").innerHTML = productsFive.description;
-                document.getElementById("txtProductFivePrice").innerHTML = productsFive.price;
+                document.getElementById("txtProductFivePrice").innerHTML = productsFive.price.toFixed(2);
                 document.getElementById("txtProductFiveQuantity").innerHTML = productsFive.quantity;
-                document.getElementById("txtProductFiveValue").innerHTML = productsFive.value;
+                document.getElementById("txtProductFiveValue").innerHTML = (productsFive.value * productsFive.quantity).toFixed(2);
                 //hides table on page load
                 products.style.display = "none";
                 services.style.display = "none";
