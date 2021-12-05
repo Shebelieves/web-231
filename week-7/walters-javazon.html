@@ -121,7 +121,7 @@
                                 <th>Minimum Billable Hours</th>
                             </tr>
                             <tr>
-                                <td id="txtServicesIdOne"></td>
+                                <td id="txtServicesOneId"></td>
                                 <td id="txtServicesOneDescription"></td>
                                 <td id= "txtServicesOneRate"></td>
                                 <td id="txtServicesOneHour"></td>
@@ -203,10 +203,13 @@
                         this.description = description;
                         this.price = price;
                         this.quantity = quantity;
-                        this.totalValue = this.price * this.quantity;
-                        this.totalValue = this.totalValue.toFixed(2);
                     }
-                }  
+                  
+                    totalValue() {
+                        let total = this.quantity * this.price;
+                        return total.toFixed(2);
+                    }
+                }
 
                 class Services {
                     constructor(id, description, hourlyRate, min) {
@@ -227,23 +230,30 @@
                 }
 
                 //New product objects assigned to 5 separate variables
-                let productsOne = new products("9781118008188", "HTML and CSS: Design and Build Websites", 22.26, 10);
-                let productsTwo = new products("9781491952023", "JavaScript: The Definitive Guide 7/E", 41.33, 7);
-                let productsThree = new products("9781449331818", "Learning JavaScript Design Patterns 1/E", 25.99, 3);
-                let productsFour = new products("Express in Action: Writing, Building, and testing Node.js applications 1/E", 34.91, 3);
-                let productsFive = new products("MongoDB The Definitive Guide", 33.70, 8);
+                let productsOne = new Products("9781118008188", "HTML and CSS: Design and Build Websites", 22.26, 10);
+                let productsTwo = new Products("9781491952023", "JavaScript: The Definitive Guide 7/E", 41.33, 7);
+                let productsThree = new Products("9781449331818", "Learning JavaScript Design Patterns 1/E", 25.99, 3);
+                let productsFour = new Products("Express in Action: Writing, Building, and testing Node.js applications 1/E", 34.91, 3);
+                let productsFive = new Products("MongoDB The Definitive Guide", 33.70, 8);
 
                 //New Services object assigned to 3 separate variables
-                let servicesOne = new services("100", "Website Design", 150.00, 25);
-                let servicesTwo = new services("DevOps Consulting", 125.00, 50);
-                let servicesThree = new services("102", "Database Design", 125.00, 15);
+                let servicesOne = new Services("100", "Website Design", 150.00, 25);
+                let servicesTwo = new Services("DevOps Consulting", 125.00, 50);
+                let servicesThree = new Services("102", "Database Design", 125.00, 15);
 
                 //New Employees objects assigned to 5 separate variables
-                let employeesOne = new employees("1007", "Beethoven", "Ludwig", 13.99);
-                let employeesTwo = new employees("1008", "Bach", "Johann", 22.30);
-                let employeesThree = new employees("1009", "Mozart", "Wolfgang", 19.50);
-                let employeesFour = new employees("1010", "Brahms", "Johannes", 12.00);
-                let employeesFive = new employees("1011", "Hayden", "Joseph", 32.50);
+                let employeesOne = new Employees("1007", "Beethoven", "Ludwig", 13.99);
+                let employeesTwo = new Employees("1008", "Bach", "Johann", 22.30);
+                let employeesThree = new Employees("1009", "Mozart", "Wolfgang", 19.50);
+                let employeesFour = new Employees("1010", "Brahms", "Johannes", 12.00);
+                let employeesFive = new Employees("1011", "Hayden", "Joseph", 32.50);
+
+                //Assigning products div to a Variable
+                document.getElementById("txtProductOneId").innerHTML = productsOne.id;
+                document.getElementById("txtProductOneDescription").innerHTML = productsOne.description;
+                document.getElementById("txtProductOnePrice").innerHTML = productsOne.price;
+                document.getElementById("txtProductOneQuantity").innerHTML = productsOne.quantity;
+                document.getElementById("txtProductOneValue").innerHTML = productsOne.value;
 
                 //hides table on page load
                 products.style.display = "none";
