@@ -1,3 +1,13 @@
+/*
+Title: WEB231 CSS File
+Author: Professor Krasso
+Modified by: Shelaine Walters
+Date: December 2,2021
+Description: CSS requirements provided from WEB 231 assignments.
+Code attribution: From assignment 6.2 In-N-Out-Books
+*/
+
+
 #container{
     margin-top: 50px;
     margin-left: 100px;
@@ -44,6 +54,7 @@ td{
     border: 1px;
     border-style: solid;
     border-color: #ddd;
+    padding-left: .25em;
 }
 /*List ends*/
 
