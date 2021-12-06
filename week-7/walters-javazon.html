@@ -178,7 +178,7 @@
                             <td id="txtSalaryFour"></td>
                         </tr>
                         <tr>
-                            <td id ="txtEmployeeIdFive"></td>
+                            <td id ="txtEmployeeFiveId"></td>
                             <td id="txtLastNameFive"></td>
                             <td id="txtFirstNameFive"></td>
                             <td id="txtSalaryFive"></td>
@@ -217,10 +217,10 @@
                 }
 
                 class Employees {
-                    constructor(id, firstName, lastName, salary) {
+                    constructor(id, lastName, firstName, salary) {
                         this.id = id;
-                        this.firstName = firstName;
                         this.lastName = lastName;
+                        this.firstName = firstName;
                         this.salary = salary;
                     }
                 }
@@ -298,6 +298,33 @@
 
                 //Assigning employeeOne div to a variable service
                 document.getElementById("txtEmployeeOneId").innerHTML = employeesOne.id;
+                document.getElementById("txtLastNameOne").innerHTML = employeesOne.lastName;
+                document.getElementById("txtFirstNameOne").innerHTML = employeesOne.firstName;
+                document.getElementById("txtSalaryOne").innerHTML = employeesOne.salary.toFixed(2);
+
+                 //Assigning employeeTwo div to a variable service
+                document.getElementById("txtEmployeeTwoId").innerHTML = employeesTwo.id;
+                document.getElementById("txtLastNameTwo").innerHTML = employeesTwo.lastName;
+                document.getElementById("txtFirstNameTwo").innerHTML = employeesTwo.firstName;
+                document.getElementById("txtSalaryTwo").innerHTML = employeesTwo.salary.toFixed(2);
+
+                 //Assigning employeeThree div to a variable service
+                document.getElementById("txtEmployeeThreeId").innerHTML = employeesThree.id;
+                document.getElementById("txtLastNameThree").innerHTML = employeesThree.lastName;
+                document.getElementById("txtFirstNameThree").innerHTML = employeesThree.firstName;
+                document.getElementById("txtSalaryThree").innerHTML = employeesThree.salary.toFixed(2);
+
+                 //Assigning employeeFour div to a variable service
+                document.getElementById("txtEmployeeFourId").innerHTML = employeesFour.id;
+                document.getElementById("txtLastNameFour").innerHTML = employeesOne.lastName;
+                document.getElementById("txtFirstNameFour").innerHTML = employeesFour.firstName;
+                document.getElementById("txtSalaryFour").innerHTML = employeesFour.salary.toFixed(2);
+
+                 //Assigning employeeFive div to a variable service
+                document.getElementById("txtEmployeeFiveId").innerHTML = employeesFive.id;
+                document.getElementById("txtLastNameFive").innerHTML = employeesFive.lastName;
+                document.getElementById("txtFirstNameFive").innerHTML = employeesFive.firstName;
+                document.getElementById("txtSalaryFive").innerHTML = employeesFive.salary.toFixed(2);
 
                 //hides table on page load
                 products.style.display = "none";
