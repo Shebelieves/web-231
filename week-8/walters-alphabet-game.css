@@ -1,0 +1,14 @@
+#form-results-example, #number-results{
+    width: 600px;
+    margin: 3% auto 0;
+    text-align: center;
+}
+#form{
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+.app-header{
+    text-align: center;
+    font-size: 28px;
+}
