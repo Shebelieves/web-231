@@ -73,14 +73,22 @@
                 //For/in iteration
                 for (const property in alphabet) {
                     console.log(`${property}: ${alphabet[property]}`)
+                    alphabetOutput = alphabet.join(", ");
                 }
                 //Binding 
                 document.getElementById("alphabetOutput").innerHTML = alphabetOutput;
 
                 //onclick capture entered value
-                document.getElementById("btnFindLetter").onclick = function myFunction(){
+                document.getElementById("btnFindLetter").onclick = function (){
                     let pos = document.getElementById("txtPosition").value;
-                    let letter = pos - 1;
+                    let letterPosition = pos - 1;
+
+                    if(alphabet[letterPosition] == undefined){
+                        document.getElementById("letterResults").innerHTML = 'There are no ${pos} letters in the alphabet';
+                }
+                    else {
+                        document.getElementById("letterResults").innerHTML = '${alphabet[letterPosition]} is at position $[pos} in the alphabet';
+                    }
                 };
             </script>
     </body>
