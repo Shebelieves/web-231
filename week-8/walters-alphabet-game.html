@@ -4,6 +4,7 @@
     Modified by: Shelaine Walters
     Date: December 7, 2021
     Description: HTML for assignment 8.2 for WEB 231 Bellevue University
+    Code attribution: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
     
 -->
 
@@ -50,26 +51,37 @@
             <!--Result cards-->
             <div id="form-results-example" class="card-container">
                 <div class="card">
-                    <div class="card-title" id="letters">Letters in the Alphabet</div>
-                    <div class="card-content"></div>
+                    <div class="card-title">Letters in the Alphabet</div>
+                    <div class="card-content" id="alphabetOutput"></div>
                 </div>
             </div>
 
             <div id="form-results-example" class="card-container">
                 <div class="card">
-                    <div class="card-title" id="txtResults">Results</div>
-                    <div class="card-content"></div>
+                    <div class="card-title">Results</div>
+                    <div class="card-content" id="letterResult"></div>
                 </div>
             </div>
 
             <!--JavaScript-->
             <script>
+                //Character array of alphabet assigned to alphabet variable
                 const alphabet = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
-                const alphabetOutput = "";
 
+                //Empty string
+                let alphabetOutput = "";
+                //For/in iteration
                 for (const property in alphabet) {
                     console.log(`${property}: ${alphabet[property]}`)
                 }
+                //Binding 
+                document.getElementById("alphabetOutput").innerHTML = alphabetOutput;
+
+                //onclick capture entered value
+                document.getElementById("btnFindLetter").onclick = function myFunction(){
+                    let pos = document.getElementById("txtPosition").value;
+                    let letter = pos - 1;
+                };
             </script>
     </body>
 </html>
