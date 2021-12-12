@@ -66,15 +66,12 @@
             <!--JavaScript-->
             <script>
                 //Character array of alphabet assigned to alphabet variable
-                const alphabet = ["A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z"];
-
-                //Empty string
-                let alphabetOutput = "";
-                
-                //For/in iteration
+                const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+                let alphabetOutput = ""; //Empty string
                 for (let letter in alphabet) {
-                    alphabetOutput = alphabet.join(", ");
+                    alphabetOutput = alphabetOutput + alphabet[letter] + ", "; //For/in iteration
                 }
+
                 //Binding 
                 document.getElementById("alphabetOutput").innerHTML = alphabetOutput;
 
@@ -83,13 +80,12 @@
                     let pos = document.getElementById("txtPosition").value;
                     let letterPosition = pos - 1;
 
-                    //Result is position of letter is undefined.
                     if(alphabet[letterPosition] == undefined) {
-                        document.getElementById("letterResult").innerHTML = `There are no ${pos} letters in the alphabet`;
-                }
-                    //Defines the letter position in alphabet.
+                        document.getElementById("letterResult").innerHTML = `There are no ${pos} letters in the alphabet`; //Result if position of letter is undefined
+                        
+                    }
                     else {
-                        document.getElementById("letterResult").innerHTML = `${alphabet[letterPosition]} is at position ${pos} in the alphabet`;
+                        document.getElementById("letterResult").innerHTML = `${alphabet[letterPosition]} is at position ${pos} in the alphabet`; //Defines the letter position in alphabet.
                     }
                 }
             </script>
