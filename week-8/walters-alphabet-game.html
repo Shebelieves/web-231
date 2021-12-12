@@ -34,7 +34,7 @@
                     <div class="card-content">
                         <div class="form-field">
                             <label for="txtPosition">Alphabet Letter Position</label>
-                            <input type="text" class="txtPosition" id="txtPosition" name="Alphabet Position" />                      
+                            <input type="text" class="txtPosition" id="txtPosition" min="1" />                      
                             
                         </div>
                         <!--Button-->
@@ -70,21 +70,21 @@
 
                 //Empty string
                 let alphabetOutput = "";
+                
                 //For/in iteration
-                for (const property in alphabet) {
-                    console.log(`${property}: ${alphabet[property]}`)
+                for (let letter in alphabet) {
                     alphabetOutput = alphabet.join(", ");
                 }
                 //Binding 
                 document.getElementById("alphabetOutput").innerHTML = alphabetOutput;
 
                 //onclick capture entered value
-                document.getElementById("btnFindLetter").onclick = function (){
+                document.getElementById("btnFindLetter").onclick = function () {
                     let pos = document.getElementById("txtPosition").value;
                     let letterPosition = pos - 1;
 
                     //Result is position of letter is undefined.
-                    if(alphabet[letterPosition] == undefined){
+                    if(alphabet[letterPosition] == undefined) {
                         document.getElementById("letterResult").innerHTML = `There are no ${pos} letters in the alphabet`;
                 }
                     //Defines the letter position in alphabet.
