@@ -1,0 +1,51 @@
+/*
+Title: WEB231 CSS File
+Author: Professor Krasso
+Modified by: Shelaine Walters
+Date: December 14,2021
+Description: CSS requirements provided from WEB 231 assignments.
+Code attribution: From assignment 9.2 
+*/
+
+#container{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body{
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+.card-container{
+    width: 600px;
+    margin: 3% auto 0;
+}
+.app-header {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+    }
+
+    .card .card-content {
+        font-size: 28px;
+    }
+
+    .btn.btn-primary {
+        margin: 10px 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #shuffledCards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .card.player-card {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
