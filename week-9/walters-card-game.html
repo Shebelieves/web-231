@@ -52,11 +52,11 @@
         <script>
             // card class
             class Card {
-                constructor (face, suit) {
+                constructor(face, suit) {
                     this.face = face;
                     this.suit = suit;
                 }
-            };
+            }
             // Dealer class no parameters
             class Dealer{
                 constructor () {
@@ -70,8 +70,8 @@
 
             var cards = [];
 
-            var faces = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-            var suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+            var faces = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+            var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 
             //function
             function getDeckOfCards () {
@@ -80,17 +80,15 @@
                 }
             }
 
-            //function
+            //function that executes shuffle
             function shuffle () {
-                for (var count = 0; count < this.CARD_COUNT; count++) {
-                    var randomNumber = Math.floor(Math.random() * this.CARD_COUNT);
-                    if (randomNumber > 0 || randomNumber < 52){
-                        var secondCard = randomNumber;
-                    } 
-                    
-                    var firstCard = randomNumber[0];
+                for (let firstCard = 0; firstCard < this.CARD_COUNT; firstCard++) {
+                   
                     let tempCard = this.cards[firstCard];
 
+                    let secondCard = Math.floor(Math.random() * this.CARD_COUNT);
+                    
+                    //Variables
                     this.cards[firstCard] = this.cards[secondCard];
                     this.cards[secondCard] = tempCard;
                 }
@@ -98,9 +96,9 @@
 
             function buildPlayingCard(card, suitIcon, faceColor, suitColor) {
                 return `<div class="card player-card">
-                    <div class="card-title" style="color: ${faceColor};">
-                        <div class="card-content">
-                            ${card.face}
+                    <div class="card-title" style="color: ${faceColor}; font-size: 20px; padding-left: 10px; text-align: left;">
+                        ${card.face}
+                        <div class="card-content" style= "font-size: 28px; padding-bottom: 25px;">
                             <span class="${suitIcon}" style="color: ${suitColor};"></span>
                             </div>
                         </div>
@@ -108,14 +106,15 @@
             }
 
             //onClick function
-            document.getElementById("btnDealCards").onclick = function dealCards() {
-                var dealer = new Dealer();
+            document.getElementById("btnDealCards").onclick = function () {
 
-                shuffle();
+                var dealer = new Dealer();
+                //shuffle function
+                shuffle(dealer);
 
                 var cardOutputWithIcon = "";
 
-                for (let card of cards) {
+                for (card of cards) {
 
                     switch (card.suit) {
                         case "Hearts":
@@ -138,7 +137,7 @@
 
                     }
                 }
-
+                //bind card output
                 document.getElementById("shuffledCards").innerHTML = `${cardOutputWithIcon}`;
             }
 
